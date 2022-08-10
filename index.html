@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página Web</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+<body>
+
+        <center>
+        <img src="images/foto_perfil.jpeg" width="180" alt="Perfil">
+        <h1> Roberto Fernando Lozada </h1>
+        <i>
+            <dl>
+                <dt> Licenciado en Ciencias de la Educación</dt>
+                <dt> Máster en Tecnología Educativa</dt>
+                <dt> Quito, Pichincha, Ecuador</dt>
+            </dl>
+            <br>
+        </i>
+        </center>
+        <hr>
+        <p>
+            Docente de la asignatura de Inglés como segunda lengua. Parte de la Escuela de Lenguas de la Facultad de Formación Continua. Más de 20 años de experiencia en la docencia y se ha tenido la oportunidad de colaborar con varias Instituciones de Educación Superior como la UTPL, PUCE, UTE y UDLA.
+        </p>
+        <hr>
+
+        
+        <h3>Experiencia laboral</h3>
+
+        <table border="1">
+            <thead>
+                <th>
+                    Años
+                </th>
+                <th>
+                    Empresa
+                </th>
+            </thead>
+            <tr>
+                <td>
+                    2002 - 2021
+                </td>
+                <td>
+                    Universidad UTE
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2021 - ...
+                </td>
+                <td>
+                    UDLA
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <hr>
+        
+        <h3>Habilidades</h3>
+
+        <table border="1">
+            <thead>
+                <th>
+                    Habilidad
+                </th>
+                <th>
+                    Nivel conocimiento
+                </th>
+                <th>
+                    Habilidad
+                </th>
+                <th>
+                    Nivel conocimiento
+                </th>
+            </thead>
+            <tr>
+                <td>
+                    Programación
+                </td>
+                <td>
+                    ⭐⭐⭐
+                </td>
+                <td>
+                    SQL
+                </td>
+                <td>
+                    ⭐⭐⭐
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Office
+                </td>
+                <td>
+                    ⭐⭐⭐⭐
+                </td>
+                <td>
+                    Moodle
+                </td>
+                <td>
+                    ⭐⭐⭐⭐
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <hr>
+
+        <h3>Para mayor información realice clic en las siguientes pestañas:</h3>
+        <div class="tab">
+            <button class="tablinks" onclick="clickHandle(event, 'Contacto')">Contacto</button>
+            <button class="tablinks" onclick="clickHandle(event, 'Pasatiempos')">Pasatiempos</button>
+            <button class="tablinks" onclick="clickHandle(event, 'Formulario de contacto')">Formulario de contacto</button>
+            <button class="tablinks" onclick="clickHandle(event, 'Información de pago')">Información de pago</button>
+        </div>
+
+        <div id="Formulario de contacto" class="tabcontent">
+            <section>
+                <p>
+                    <label for="name">
+                        <span>Nombre:</span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="text" id="name" name="username">
+                </p>
+                <p>
+                    <label for="mail">
+                        <Span>Correo electrónico:</ span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="email" id="mail" name="usermail">
+                </p>
+                <p>
+                    <label for="pwd">
+                        <span>Contraseña:</span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="password" id="pwd" name="password">
+                </p>
+            </section>
+        </div>
+
+        <div id="Información de pago" class="tabcontent">
+            <section>
+                <h2>Información de pago</h2>
+                <p>
+                    <label for="card">
+                        <span>Tipo de tarjeta:</span>
+                    </label>
+                    <select id="card" name="usercard">
+                        <option value="visa">Visa</option>
+                        <option value="mc">Mastercard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="number">
+                        <span>Número de tarjeta:</span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="tel" id="number" name="cardnumber">
+                </p>
+                <p>
+                    <label for="date">
+                        <span>Fecha de caducidad:</span>
+                        <strong><abbr title="required">*</abbr></strong>
+                        <em>el formato mm/aa</em>
+                    </label>
+                    <input type="date" id="date" name="expiration">
+                </p>
+            </section>
+        </div>
+
+        <div id="Contacto" class="tabcontent">
+            <h3>Datos de contacto</h3>
+            <p>
+                <li>
+                    Correo electrónico: rfll@tecnicoecuador.edu.ec
+                </li>
+            </p>
+        </div>
+        <div id="Pasatiempos" class="tabcontent">
+            <h3>Pasatiempos</h3>
+            <li>
+                Viajar
+            </li>
+            <li>
+                Conocer nuevas culturas
+            </li>
+            <li>
+                Tiempo en familia
+            </li>
+        </div>
+
+        <script>
+            function clickHandle(evt, animalName) {
+                let i, tabcontent, tablinks;
+
+                // This is to clear the previous clicked content.
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Set the tab to be "active".
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Display the clicked tab and set it to active.
+                document.getElementById(animalName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+     </body>   
+</html>
