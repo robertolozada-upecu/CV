@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+</head>
+
+<body>      
+    <h1>Formulario de contacto</h1>
+    <h3>Por favor escríbame y en breve me pondré en contacto</h3>
+    <form action="index.html" method="post">       
+        <table>
+            <tr>
+                <td>
+                    Nombre*:
+                </td>
+                <td>
+                    <input type="text" required="obligatorio" placeholder="Escriba su nombre" size="35">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Correo electrónico*:
+                </td>
+                <td>
+                    <input type="email" required="obligatorio" placeholder="Escriba su correo electrónico" size="35">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Teléfono:
+                </td>
+                <td>
+                    <input type="tel" placeholder="Escriba su teléfono"  size="35">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Asunto*:
+                </td>
+                <td>
+                    <input type="text" required="obligatorio" placeholder="Escriba un asunto" size="35">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mensaje*:
+                </td>
+                <td>
+                    <textarea required="obligatorio" placeholder="Deje aquí su comentario..." rows="10" cols="35"></textarea> 
+                </td>
+            </tr>
+                <td>
+
+                </td>    
+                <td>                 
+                    <button type="submit" style="height:50px; width:120px"><p>Enviar mensaje</p></button>
+                </td>         
+        </table>
+    </form>
+    <p>
+        * ¡Los campos son obligatorios!
+    </p>
+    <a title="Volver a página de inicio" href="index.html"><img src="images/home.jpeg" width="80" alt="CV"></a>
+</body>
+</html>
